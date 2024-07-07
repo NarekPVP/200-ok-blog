@@ -1,17 +1,11 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+narek:
+  name: Narek Hovhannisyan
+  title: Автор канала 200Ok
+  url: https://github.com/NarekPVP
+  image_url: https://avatars.githubusercontent.com/u/57366386?v=4
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+200OK:
+  name: 200 Ok
+  title: канал 200Ok
+  url: https://t.me/Ok200Dev
+  image_url: https://avatars.githubusercontent.com/u/174956129?v=4

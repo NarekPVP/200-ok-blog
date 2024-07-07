@@ -1,25 +1,26 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: '200 Ok',
-  tagline: '200 Ok блог',
-  favicon: 'img/favicon.ico',
+  title: "200 Ok",
+  tagline:
+    "Сайт телеграм-канала 200Ok. Здесь вы можете ознакомиться со статьями канала, но с более подробной информацией.",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://your-docusaurus-site.example.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: '200OkBlog', // Usually your GitHub org/user name.
-  projectName: '200-ok-blog', // Usually your repo name.
+  organizationName: "200OkBlog", // Usually your GitHub org/user name.
+  projectName: "200-ok-blog", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -29,30 +30,28 @@ const config: Config = {
   //   locales: ['en'],
   // },
   i18n: {
-    defaultLocale: 'ru',
-    locales: ['ru']
+    defaultLocale: "ru",
+    locales: ["ru"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/NarekPVP/200-ok-blog/tree/main',
+          editUrl: "https://github.com/NarekPVP/200-ok-blog/tree/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/NarekPVP/200-ok-blog/tree/main',
+          editUrl: "https://github.com/NarekPVP/200-ok-blog/tree/main",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -60,68 +59,76 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: '200Ok',
+      title: "200Ok",
       logo: {
-        alt: '200Ok Logo',
-        src: 'img/200-ok-logo.svg',
+        alt: "200Ok Logo",
+        src: "img/200-ok-logo.svg",
       },
       items: [
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
+        { to: "/blog", label: "Статьи", position: "left" },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://t.me/Ok200Dev',
-          label: 'Телеграм',
-          position: 'right',
+          href: "https://t.me/Ok200Dev",
+          label: "Телеграм",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Общий',
+          title: "Общий",
           items: [
             {
-              label: 'Статьи',
-              to: '/blog',
+              label: "Статьи",
+              to: "/blog",
             },
           ],
         },
         {
-          title: 'Сообщество',
+          title: "Сообщество",
           items: [
             {
-              label: 'Телеграм',
-              href: 'https://t.me/Ok200Dev',
+              label: "Телеграм",
+              href: "https://t.me/Ok200Dev",
             },
             {
-              label: 'YouTube',
-              href: 'https://www.youtube.com/@200OK-dev',
-            }
+              label: "YouTube",
+              href: "https://www.youtube.com/@200OK-dev",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/200OkDev",
+            },
           ],
         },
         {
-          title: 'Автор проекта',
+          title: "Автор проекта",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/NarekPVP',
+              label: "GitHub",
+              href: "https://github.com/NarekPVP",
+            },
+            {
+              label: "Телеграм",
+              href: "https://t.me/NarekDev",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 200Ok, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} 200Ok, Inc.`,
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.vsDark
+      darkTheme: prismThemes.vsDark,
       // darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,

@@ -1,16 +1,40 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+javascript:
+  label: javascript
+  permalink: /javascript
+  description: javascript
+typescript:
+  label: typescript
+  permalink: /typescript
+  description: typescript
+react:
+  label: react
+  permalink: /react
+  description: CRA, React, Classic React App
+next-js:
+  label: next-js
+  permalink: /next-js
+  description: Next JS, Vercel
+angular:
+  label: angular
+  permalink: /angular
+  description: Angular, google
+react-native:
+  label: react-native
+  permalink: /react-native
+  description: React Native
+expo:
+  label: expo
+  permalink: /expo
+  description: Expo React Native
+python:
+  label: Python
+  permalink: /python
+  description: python
+programming:
+  label: программирование
+  permalink: /programming
+  description: программирование
+development:
+  label: разработка
+  permalink: /development
+  description: разработка

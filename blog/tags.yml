@@ -46,3 +46,11 @@ libraries-services:
   label: библиотеки-сервисы
   permalink: /libraries-services
   description: libraries services
+plugins:
+  label: плагины
+  permalink: /plugins
+  description: plugins
+vs-code:
+  label: vs-code
+  permalink: /vs-code
+  description: visual studio code

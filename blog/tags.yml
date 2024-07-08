@@ -38,3 +38,11 @@ development:
   label: разработка
   permalink: /development
   description: разработка
+libraries:
+  label: библиотеки
+  permalink: /libraries
+  description: библиотеки
+libraries-services:
+  label: библиотеки-сервисы
+  permalink: /libraries-services
+  description: libraries services

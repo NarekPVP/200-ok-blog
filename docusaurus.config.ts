@@ -9,7 +9,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "http://localhost:3000",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -21,7 +21,20 @@ const config: Config = {
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
+  headTags: [
+    {
+      tagName: "script",
+      innerHTML: "window.yaContextCb=window.yaContextCb||[]",
+      attributes: {}
+    },
+    {
+      tagName: "script",
+      attributes: {
+        src: "https://yandex.ru/ads/system/context.js",
+        async: "async"
+      },
+    }
+  ],
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -33,7 +46,6 @@ const config: Config = {
     defaultLocale: "ru",
     locales: ["ru"],
   },
-
   presets: [
     [
       "classic",
@@ -56,7 +68,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",

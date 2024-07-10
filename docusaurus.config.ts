@@ -23,17 +23,25 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   headTags: [
     {
+      tagName: "meta",
+      attributes: {
+        name: "zen-verification",
+        content:
+          "73gpWemxhmgLQeKdcvRUvtwsEUGiDUIYq7eiMGlaPUTb0sAI3oyHp4SP2uVDLRxd",
+      },
+    },
+    {
       tagName: "script",
       innerHTML: "window.yaContextCb=window.yaContextCb||[]",
-      attributes: {}
+      attributes: {},
     },
     {
       tagName: "script",
       attributes: {
         src: "https://yandex.ru/ads/system/context.js",
-        async: "async"
+        async: "async",
       },
-    }
+    },
   ],
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

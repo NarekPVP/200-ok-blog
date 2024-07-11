@@ -54,3 +54,15 @@ vs-code:
   label: vs-code
   permalink: /vs-code
   description: visual studio code
+front-end:
+  label: front-end
+  permalink: /front-end
+  description: front-end
+tailwindcss:
+  label: tailwindcss
+  permalink: /tailwindcss
+  description: css library tailwindcss
+css:
+  label: css
+  permalink: /css
+  description: css

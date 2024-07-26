@@ -1,0 +1,77 @@
+---
+slug: deep-email-validator
+title: Лучший способ проверки электронной почты.
+authors: [200OK]
+tags: [programming, development]
+---
+
+### Что такое deep-email-validator
+
+**Deep-email-validator** - это пакет, который проверяет адреса электронной почты на основе регулярных выражений, распространенных опечаток, одноразовых черных списков электронной почты, записей DNS и ответов SMTP-сервера.
+
+### Как установить
+
+Чтобы начать, просто установите пакет с помощью `npm` или `yarn`.
+
+```bash
+npm i deep-email-validator --save
+```
+
+```bash
+yarn add deep-email-validator
+```
+
+### Как использовать
+
+Просто импортируйте функцию `validate` из
+модуля `deep-email-validator` и используйте ее с электронной почтой, которую вы хотите проверить.
+
+```js
+import validate from "deep-email-validator";
+
+const main = async () => {
+  let res = await validate("asdf@gmail.com");
+  console.log(res);
+};
+```
+
+**Вы получите примерно такой ответ.**
+
+```JSON
+{
+    "valid": false,
+    "reason": "smtp",
+    "validators": {
+        "regex": {
+          "valid": true
+        },
+        "typo": {
+          "valid": true
+        },
+        "disposable": {
+          "valid": true
+        },
+        "mx": {
+          "valid": true
+        },
+        "smtp": {
+          "valid": false,
+          "reason": "Mailbox not found.",
+        }
+    }
+  }
+```
+
+Кроме того, если не хотите получать такой длинный ответ, то можно настроить функцию `validate`.
+
+```js
+await validate({
+  email: "name@example.org",
+  sender: "name@example.org",
+  validateRegex: true,
+  validateMx: true,
+  validateTypo: true,
+  validateDisposable: true,
+  validateSMTP: true,
+});
+```
